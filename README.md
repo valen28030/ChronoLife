@@ -111,7 +111,6 @@ text_respuesta.setText("Días vividos: " + diferenciaEnDias);
  ## Requisitos
   <ul>
             <li>Dispositivo móvil con sistema operativo iOS/Android</li>
-            <li>Conexión a internet para compartir la tarjeta de presentación</li>
         </ul>
         <p>&nbsp;</p>
         
