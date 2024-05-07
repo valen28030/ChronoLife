@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="ChronoLife"
+        android:textColor="#0548F3"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/rounded_corners"
+        android:calendarTextColor="#A9FFFC"
+        android:calendarViewShown="true"
+        android:spinnersShown="false"
+        android:yearListSelectorColor="#A9FFFC" />
+
+    <TextView
+        android:id="@+id/text_fecha_seleccionada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datePicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Fecha Seleccionada: "
+        android:textColor="#0548F3"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_respuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_fecha_seleccionada"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textColorHighlight="#01D9FF"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
