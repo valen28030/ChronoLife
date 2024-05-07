@@ -19,8 +19,8 @@
 <p align="justify"><strong>2. Motor de Cálculo de Días Vividos</strong></p>
 <p align="justify">Detrás de la interfaz de usuario, ChronoLife utiliza un motor de cálculo para determinar la cantidad de días vividos entre la fecha seleccionada y la fecha actual.</p>
 <p align="justify">Cuando seleccionas una fecha en el calendario, la aplicación realiza automáticamente los cálculos necesarios y muestra el resultado en la pantalla.</p>
-<img src="https://github.com/valen28030/Tarjeta_Visita/assets/167770750/aed3a25a-56ef-4689-b07c-48a83e4cf99c" alt="Tarjeta de Presentación" width="300">
-        <p>&nbsp;</p>
+<img src="https://github.com/valen28030/ChronoLife/assets/167770750/8ce2c521-5df8-4a13-89be-b81689bc9568" alt="Tarjeta de Presentación" width="300">
+<p>&nbsp;</p>
         
  ## Estructura de código
   <p align="justify">El código de ChronoLife se compone de dos archivos principales: MainActivity.java y activity_main.xml.</p>
@@ -102,6 +102,11 @@ long diferenciaEnDias = /* diferencia en días */;
 text_respuesta.setText("Días vividos: " + diferenciaEnDias);
 ```   
 <p>&nbsp;</p>
+
+## Coclusión
+  <p align="justify">Al utilizar estos elementos y segmentos de código, la aplicación ChronoLife proporciona una experiencia fluida y fácil de usar para los usuarios, permitiéndoles mantener un registro visual de su historia personal de una manera efectiva.</p>
+
+&nbsp;
         
  ## Requisitos
   <ul>
