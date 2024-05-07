@@ -24,7 +24,84 @@
         
  ## Estructura de código
   <p align="justify">El código de ChronoLife se compone de dos archivos principales: MainActivity.java y activity_main.xml.</p>
-       
+  
+### activity_main.xml:
+
+**1. Diseño de la Interfaz de Usuario** 
+   - Se utiliza un RelativeLayout como contenedor principal para organizar los elementos en la pantalla.
+   - Se definen TextViews para mostrar el título, la fecha seleccionada y la respuesta de días vividos.
+   - Se incluye un DatePicker para permitir la selección de fechas.
+     
+```sh
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ChronoLife"
+        <!-- Otros atributos de estilo -->
+        />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        <!-- Otros atributos de estilo -->
+        />
+
+    <TextView
+        android:id="@+id/text_fecha_seleccionada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha Seleccionada: "
+        <!-- Otros atributos de estilo -->
+        />
+
+    <TextView
+        android:id="@+id/text_respuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        <!-- Otros atributos de estilo -->
+        />
+</RelativeLayout>
+```
+<p>&nbsp;</p>
+
+### MainActivity.java:
+
+**1. Inicialización de la Interfaz de Usuario** 
+   - En el método onCreate(), se inicializan los elementos de la interfaz de usuario, como los TextViews y el DatePicker, utilizando sus IDs definidos en el archivo XML.
+     
+```sh
+text_respuesta = findViewById(R.id.text_respuesta);
+text_fecha_seleccionada = findViewById(R.id.text_fecha_seleccionada);
+```
+<p>&nbsp;</p>
+
+**2. Mostrar el Calendario Automáticamente** 
+   - En el método showDatePicker(), se configura el DatePicker para que se muestre automáticamente al abrir la aplicación. Esto se logra llamando al método datePicker.init() con los parámetros necesarios.
+     
+```sh
+DatePicker datePicker = findViewById(R.id.datePicker);
+datePicker.init(/* parámetros de fecha actual */, (view, year, month, dayOfMonth) -> {
+    // Manejo de la selección de fecha
+});
+```
+<p>&nbsp;</p>
+
+**3. Cálculo de Días Vividos** 
+   - En el método calcularDias(), se calcula la diferencia en días entre la fecha seleccionada y la fecha actual utilizando objetos Calendar y operaciones matemáticas. Luego, se muestra el resultado en el TextView correspondiente.
+     
+```sh
+long diferenciaEnMilisegundos = /* diferencia en milisegundos */;
+long diferenciaEnDias = /* diferencia en días */;
+text_respuesta.setText("Días vividos: " + diferenciaEnDias);
+```   
+<p>&nbsp;</p>
         
  ## Requisitos
   <ul>
@@ -44,7 +121,7 @@
  ## Contacto
   <p align="justify">Para obtener soporte técnico, reportar errores o proporcionar comentarios, no dudes en contactar.</p>
         <p>&nbsp;</p>
-<p align="justify">¡Esperamos que disfrutes utilizando la Tarjeta de Presentación App para crear tus propias tarjetas de presentación únicas y profesionales!</p>
+<p align="justify">¡Esperamos que disfrutes utilizando la app de ChronoLife para calcular los dias vividos desde tus feschas mas importantes!</p>
         <hr>
         <p align="justify">Esta es una descripción general de la funcionalidad y contenido de la aplicación. Para obtener instrucciones detalladas sobre cómo utilizar cada característica, consulta la documentación incluida en la aplicación o comunícate con el desarrollador.</p>
 </div>
